@@ -131,6 +131,11 @@ td.sidebar {
   background: #ffc;
 }
 
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+
 /* signup sheet */
 div.field, div.actions {
   margin-bottom: 10px;
@@ -177,4 +182,14 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+/* user list */
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
 }

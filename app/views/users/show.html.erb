@@ -3,6 +3,8 @@
     <td class="main">
       <h1>
         <%= @user.name %>
+	  <%= gravatar_image_tag @user.email %>
+
       </h1>
     </td>
     <td class="sidebar round">
