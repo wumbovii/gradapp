@@ -1,5 +1,10 @@
 require 'digest'
 class User < ActiveRecord::Base
+  
+  has_many :posts
+  has_and_belongs_to_many :schools
+  has_many :attachments
+
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
