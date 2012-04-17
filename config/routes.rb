@@ -13,10 +13,13 @@ NewSampleApp::Application.routes.draw do
   get "pages/contact"
   get "pages/about"
 
-  match '/signup', :to => 'users#new'
-  match '/contact', :to => 'pages#contact'
-  match '/about',   :to => 'pages#about'
-  match '/help',    :to => 'pages#help'
+  match '/signup',    :to => 'users#new'
+  match '/contact',   :to => 'pages#contact'
+  match '/about',     :to => 'pages#about'
+  match '/help',      :to => 'pages#help'
+  match '/forum',     :to => 'forums#index',  :as => :forum
+  get   '/forum/new', :to => 'forums#new',    :as => :new_forum
+  post  '/forum/new', :to => 'forums#create',  :as => :create_forum
 
   root  :to => 'pages#home'
 
