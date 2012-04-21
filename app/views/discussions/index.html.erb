@@ -1,0 +1,14 @@
+<% if true or current_user.admin?%>
+    <%= link_to "Add New Discussion", new_discussion_path%>
+<% end%>
+
+<br>
+<br>
+
+THIS IS A LIST OF ALL THE DISCUSSIONS WE HAVE:
+<br>
+<br>
+<% @discussions.each do |f| %>
+    Subject: <%= link_to f.subject, show_discussion_path(f.id)%>
+    <br>
+<% end %>

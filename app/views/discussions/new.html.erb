@@ -1,0 +1,9 @@
+Add Discussion Page:
+
+<%= form_for @new_discussion, :url => create_discussion_path(), :method => "POST" do |d| %>
+
+    <%= label_tag :subject %>
+    <%= d.text_field :subject, :id => "subject" %>
+
+    <%= d.submit "Add Discussion", :id => "add_discussion", :class => "save-btn" %>
+<% end %>

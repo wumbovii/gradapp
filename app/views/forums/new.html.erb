@@ -1,9 +1,0 @@
-Add Forum Page:
-
-<%= form_for @new_forum, :url => create_forum_path(), :method => "POST" do |f| %>
-
-    <%= label_tag :title %>
-    <%= f.text_field :title, :id => "title" %>
-
-    <%= f.submit "Add Forum", :id => "add_forum", :class => "save-btn" %>
-<% end %>

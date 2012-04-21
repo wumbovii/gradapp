@@ -1,0 +1,9 @@
+Add Post Page:
+
+<%= form_for @new_post, :url => create_post_path(@id), :method => "POST" do |d| %>
+
+    <%= label_tag :comment %>
+    <%= d.text_field :comment, :id => "comment" %>
+
+    <%= d.submit "Add Post", :id => "add_post", :class => "save-btn" %>
+<% end %>

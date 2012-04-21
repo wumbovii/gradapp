@@ -17,9 +17,14 @@ NewSampleApp::Application.routes.draw do
   match '/contact',   :to => 'pages#contact'
   match '/about',     :to => 'pages#about'
   match '/help',      :to => 'pages#help'
-  match '/forum',     :to => 'forums#index',  :as => :forum
+  match '/forum',     :to => 'discussions#index',  :as => :forum
   get   '/forum/new', :to => 'forums#new',    :as => :new_forum
   post  '/forum/new', :to => 'forums#create',  :as => :create_forum
+  get   '/discussion/new', :to => 'discussions#new',    :as => :new_discussion
+  post  '/discussion/new', :to => 'discussions#create',  :as => :create_discussion
+  get 	'/discussion/show/:id',	:to => 'discussions#show',	:as => :show_discussion
+  get 	'/discussion/show/:id/new', :to => 'discussions#new_post',	:as => :new_post
+  post	'/discussion/show/:id/new', :to => 'discussions#create_post', :as => :create_post
 
   root  :to => 'pages#home'
 

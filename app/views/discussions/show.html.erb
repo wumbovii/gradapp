@@ -1,0 +1,10 @@
+DISCUSSION: <%= @discussion.subject %>
+<br>
+<%= link_to "Add New Post", new_post_path(@discussion.id)%>
+<br>
+<br>
+
+<% @posts.each do |f| %>
+    <%= f.comment%> <br> <%= "			posted by: #{f.user.name}"%>
+    <br><br>
+<% end %>
